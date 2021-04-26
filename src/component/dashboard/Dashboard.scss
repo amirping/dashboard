@@ -12,6 +12,32 @@
     }
     .spaced {
         justify-content: space-between;
+        width: 100%;
+    }
+    .full {
+        width: 100%;
+    }
+    .badge-table {
+        border-radius: 5px;
+        width: 57px;
+        font-size: 17px;
+        text-align: center;
+        padding: {
+            top: 5px;
+            bottom: 5px;
+        };
+        &.crit {
+            background-color: $crit;
+            color: black;
+        }
+        &.mid {
+            background-color: $mid;
+            color: black;
+        }
+        &.high {
+            background-color: $high;
+            color: white;
+        }
     }
     .row {
         display: flex;

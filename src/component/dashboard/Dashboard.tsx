@@ -1,4 +1,5 @@
 import React from 'react'
+import { Doughnut } from 'react-chartjs-2';
 import './Dashboard.scss'
 
 export default function Dashboard() {
@@ -69,7 +70,7 @@ export default function Dashboard() {
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col">
+                            <div className="col full">
                                 <div className="row spaced">
                                     <div>
                                         <span className="material-icons">fiber_manual_record</span>
@@ -93,7 +94,18 @@ export default function Dashboard() {
                                 </div>
                             </div>
                             <div className="col">
-
+                                <Doughnut
+                                    type='doughnut' 
+                                    data={{
+                                    datasets: [{
+                                        data: [300, 50, 100],
+                                        backgroundColor: [
+                                        'rgb(255, 99, 132)',
+                                        'rgb(54, 162, 235)',
+                                        'rgb(255, 205, 86)'
+                                        ],
+                                        }]
+                                    }} />
                             </div>
                         </div>
                     </div>
@@ -101,13 +113,45 @@ export default function Dashboard() {
                 <div className="card">
                     <div className="header-card">At the teacher's <div className="badge">10</div></div>
                     <div className="body-big">
-
+                        <div className="col">
+                            <div className="row spaced">
+                                <span>Teacher 1</span><span className="badge-table mid"> 20% </span>
+                            </div>
+                            <div className="row spaced">
+                                <span>Teacher 1</span><span className="badge-table crit"> 30% </span>
+                            </div>
+                            <div className="row spaced">
+                                <span>Teacher 1</span><span className="badge-table high"> 10% </span>
+                            </div>
+                            <div className="row spaced">
+                                <span>Teacher 1</span><span className="badge-table mid"> 40% </span>
+                            </div>
+                            <div className="row spaced">
+                                <span>Teacher 1</span><span className="badge-table crit"> 50% </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className="card">
                     <div className="header-card">At the student <div className="badge">10</div></div>
                     <div className="body-big">
-
+                        <div className="col">
+                            <div className="row spaced">
+                                <span>Student 1</span><span className="badge-table mid"> 20% </span>
+                            </div>
+                            <div className="row spaced">
+                                <span>Student 1</span><span className="badge-table crit"> 30% </span>
+                            </div>
+                            <div className="row spaced">
+                                <span>Student 1</span><span className="badge-table high"> 10% </span>
+                            </div>
+                            <div className="row spaced">
+                                <span>Student 1</span><span className="badge-table mid"> 40% </span>
+                            </div>
+                            <div className="row spaced">
+                                <span>Student 1</span><span className="badge-table crit"> 50% </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
